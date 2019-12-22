@@ -5,25 +5,8 @@ class CgolPitch extends HTMLElement {
         this._color = "blue";
         this._pixelSize = "15px";
         this.currentDiv = document.getElementById("container");
-        // this.heightTemp = Number(this.height);
-        // this.widthTemp = Number(this.width);
         this.createElement(this.currentDiv);
     }
-    // public heightTemp: number;
-    // public widthTemp: number;
-    // public get pixelSize(): string
-    // {
-    //     return this.getAttribute('width')!;
-    // }
-    // public set pixelSize(value: string) 
-    // {
-    //     if (Number(value) == NaN || Number(value) < 10) 
-    //     {
-    //          return;
-    //     }
-    //     // this.widthTemp = Number(value);
-    //     this.setAttribute("pixelSize", value.toString()); 
-    // }
     get width() {
         return this.getAttribute('width');
     }
@@ -31,7 +14,6 @@ class CgolPitch extends HTMLElement {
         if (Number(value) == NaN || Number(value) < 10) {
             return;
         }
-        // this.widthTemp = Number(value);
         this.setAttribute("width", value.toString());
     }
     get height() {
@@ -41,7 +23,6 @@ class CgolPitch extends HTMLElement {
         if (Number(value) == NaN || Number(value) < 10) {
             return;
         }
-        // this.heightTemp = Number(value);
         this.setAttribute("height", value.toString());
     }
     createElement(firstElement) {
@@ -49,7 +30,6 @@ class CgolPitch extends HTMLElement {
         var cell = document.createElement("div");
         cell.id = "firstElement";
         cell.style.textAlign = "center";
-        // firstElement.style.textAlign = "center";
         document.body.insertBefore(cell, firstElement);
         for (var i = 0; i < Number(this.height); i++) {
             var div1 = document.createElement('div');
@@ -82,12 +62,10 @@ class CgolPitch extends HTMLElement {
         switch (name) {
             case 'height':
                 console.log(`Height value changed from ${oldValue} to ${newValue}`);
-                // this.heightTemp = Number(newValue);
                 this.setAttribute(this.height.toString(), newValue);
                 break;
             case 'width':
                 console.log(`Width value changed from ${oldValue} to ${newValue}`);
-                // this.widthTemp = Number(newValue);
                 this.setAttribute(this.width.toString(), newValue);
                 break;
         }
@@ -170,6 +148,7 @@ loadLevelButton.onclick = loadLevel;
 let generationText = document.getElementById("generation");
 updateGenerationText();
 window.addEventListener("resize", updateGridPixelSize);
+window.addEventListener("orientationchanged", updateGridPixelSize);
 function clickedElement($event) {
     let id = event.target.id;
     handleClickedElement(id);
@@ -328,7 +307,6 @@ function InitializeGame() {
 function oneStep() {
     nextGeneration();
     updateGenerationText();
-    generation++;
 }
 function nextGeneration() {
     nothingChanged = true;
