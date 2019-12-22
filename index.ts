@@ -1,4 +1,5 @@
-class CgolPitch extends HTMLElement {
+class CgolPitch extends HTMLElement
+{
     constructor() 
     {
         super();
@@ -239,8 +240,7 @@ function handleClickedElement(id:string)
 
 function updateGridPixelSize()
 {
-    console.log("resize pixel")
-   
+    console.log("resize pixel");   
     let cgolPitchTemp = <CgolPitch>document.getElementsByTagName("cgol-pitch")[0];
     let firstElement = (cgolPitchTemp.shadowElement.querySelector("#container") as HTMLDivElement);
     let width = window.innerWidth;
