@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Conway's Game of Life</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="Images\apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images\favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images\favicon-16x16.png">
-    <link rel="manifest" href="Images\site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- Bootstrap CSS -->
@@ -36,35 +36,31 @@
                             <div class="row-sm">
                                 <div class="col-sm align-self-start">
                                     <label style="color: whitesmoke;">Height:</label>
-                                    <input type="text" id="height" maxlength="5" size="5"
-                                        ></input>
-                                </div>
+                                    <input type="text" id="height" maxlength="5" size="5"> </div>
                                 <div class="col-sm">
                                     <label style="color: whitesmoke;">Width: </label>
                                     <input type="text" id="width" maxlength="5" size="5"></input>
-                                    <input type="button" class="btn btn-outline-light" id="setSize"
-                                        value="Set size"></input>
+                                    <input type="button" class="btn btn-outline-light" id="setSize" value="Set size">
                                 </div>
                             </div>
                             <div class="row-sm " style="margin-top: 4%;">
                                 <label style="color: whitesmoke;">Reproduction time:</label>
-                                <input type="text" id="timer" maxlength="5" size="5"></input>
-                                <input type="button" class="btn btn-outline-light" id="setTimer"
-                                    value="Set timer"></input>
+                                <input type="text" id="timer" maxlength="5" size="5">
+                                <input type="button" class="btn btn-outline-light" id="setTimer" value="Set timer">
                             </div>
                         </div>
                         <div class="col-sm">
                             <div class="row-sm">
                                 <label style="color: whitesmoke;">Load level: </label>
                                 <textarea id="textarea"></textarea>
-                                <input type="button" class="btn btn-outline-light" id="loadLevel" value="Load"></input>
+                                <input type="button" class="btn btn-outline-light" id="loadLevel" value="Load">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-            <cgol-pitch height="25" width="65"></cgol-pitch>
+        </div>
+        <cgol-pitch height="25" width="65"></cgol-pitch>
     </main>
     <script src="index.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -77,4 +73,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
