@@ -269,6 +269,12 @@ function updateGridPixelSize()
     let sizeWidth = Math.floor(width / cols);
     let sizeHeight = Math.floor(height / rows);
     let size = Math.min(maxSize, sizeWidth, sizeHeight);
+    
+    if (size < 5)
+    {
+        size = 5;
+    }
+
     cgolPitchTemp.updateGrid(size);
 }
 
