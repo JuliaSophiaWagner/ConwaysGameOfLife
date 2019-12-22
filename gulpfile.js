@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const ts = require('gulp-typescript');
-// const sass = require('gulp-sass');
 
 var paths = {
     tsSrc: '*.ts',

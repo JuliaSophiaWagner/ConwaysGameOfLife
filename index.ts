@@ -171,7 +171,7 @@ enum ClickState
     dead
 }
 
-let rows:number = 20;
+let rows:number = 25;
 let cols: number = 65;
 let field = new Array(rows);
 let fieldTemp = new Array(rows);
@@ -205,7 +205,7 @@ loadLevelButton!.onclick = loadLevel;
 
 let generationText = document.getElementById("generation");
 updateGenerationText();
-
+updateGridPixelSize();
 window.addEventListener("resize", updateGridPixelSize);
 window.addEventListener("orientationchanged", updateGridPixelSize);
 
@@ -256,6 +256,7 @@ function updateGridPixelSize()
     }
 
     cgolPitchTemp.updateGrid(size);
+    changeColorsOfGrid();
 }
 
 function updateGenerationText()

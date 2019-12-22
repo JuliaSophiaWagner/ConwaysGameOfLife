@@ -121,7 +121,7 @@ var ClickState;
     ClickState[ClickState["alive"] = 0] = "alive";
     ClickState[ClickState["dead"] = 1] = "dead";
 })(ClickState || (ClickState = {}));
-let rows = 20;
+let rows = 25;
 let cols = 65;
 let field = new Array(rows);
 let fieldTemp = new Array(rows);
@@ -147,6 +147,7 @@ let loadLevelButton = document.getElementById('loadLevel');
 loadLevelButton.onclick = loadLevel;
 let generationText = document.getElementById("generation");
 updateGenerationText();
+updateGridPixelSize();
 window.addEventListener("resize", updateGridPixelSize);
 window.addEventListener("orientationchanged", updateGridPixelSize);
 function clickedElement($event) {
@@ -186,6 +187,7 @@ function updateGridPixelSize() {
         size = 5;
     }
     cgolPitchTemp.updateGrid(size);
+    changeColorsOfGrid();
 }
 function updateGenerationText() {
     generationText.innerHTML = generation.toString();
